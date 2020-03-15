@@ -1,0 +1,559 @@
+ Removing any Old Docker Versions
+Loaded plugins: fastestmirror, langpacks
+No Packages marked for removal
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.vbctv.in
+ * extras: mirror.vbctv.in
+ * updates: mirror.vbctv.in
+Resolving Dependencies
+--> Running transaction check
+---> Package device-mapper-persistent-data.x86_64 0:0.7.0-0.1.rc6.el7 will be updated
+---> Package device-mapper-persistent-data.x86_64 0:0.7.3-3.el7 will be an update
+---> Package lvm2.x86_64 7:2.02.171-8.el7 will be updated
+---> Package lvm2.x86_64 7:2.02.177-4.el7 will be an update
+--> Processing Dependency: lvm2-libs = 7:2.02.177-4.el7 for package: 7:lvm2-2.02.177-4.el7.x86_64
+--> Processing Dependency: libdevmapper.so.1.02(DM_1_02_141)(64bit) for package: 7:lvm2-2.02.177-4.el7.x86_64
+---> Package yum-utils.noarch 0:1.1.31-42.el7 will be updated
+---> Package yum-utils.noarch 0:1.1.31-46.el7_5 will be an update
+--> Running transaction check
+---> Package device-mapper-libs.x86_64 7:1.02.140-8.el7 will be updated
+--> Processing Dependency: device-mapper-libs = 7:1.02.140-8.el7 for package: 7:device-mapper-1.02.140-8.el7.x86_64
+---> Package device-mapper-libs.x86_64 7:1.02.146-4.el7 will be an update
+---> Package lvm2-libs.x86_64 7:2.02.171-8.el7 will be updated
+---> Package lvm2-libs.x86_64 7:2.02.177-4.el7 will be an update
+--> Processing Dependency: device-mapper-event = 7:1.02.146-4.el7 for package: 7:lvm2-libs-2.02.177-4.el7.x86_64
+--> Running transaction check
+---> Package device-mapper.x86_64 7:1.02.140-8.el7 will be updated
+---> Package device-mapper.x86_64 7:1.02.146-4.el7 will be an update
+---> Package device-mapper-event.x86_64 7:1.02.140-8.el7 will be updated
+---> Package device-mapper-event.x86_64 7:1.02.146-4.el7 will be an update
+--> Processing Dependency: device-mapper-event-libs = 7:1.02.146-4.el7 for package: 7:device-mapper-event-1.02.146-4.el7.x86_64
+--> Running transaction check
+---> Package device-mapper-event-libs.x86_64 7:1.02.140-8.el7 will be updated
+---> Package device-mapper-event-libs.x86_64 7:1.02.146-4.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                         Arch     Version               Repository
+                                                                           Size
+================================================================================
+Updating:
+ device-mapper-persistent-data   x86_64   0.7.3-3.el7           base      405 k
+ lvm2                            x86_64   7:2.02.177-4.el7      base      1.3 M
+ yum-utils                       noarch   1.1.31-46.el7_5       updates   120 k
+Updating for dependencies:
+ device-mapper                   x86_64   7:1.02.146-4.el7      base      289 k
+ device-mapper-event             x86_64   7:1.02.146-4.el7      base      185 k
+ device-mapper-event-libs        x86_64   7:1.02.146-4.el7      base      184 k
+ device-mapper-libs              x86_64   7:1.02.146-4.el7      base      316 k
+ lvm2-libs                       x86_64   7:2.02.177-4.el7      base      1.0 M
+
+Transaction Summary
+================================================================================
+Upgrade  3 Packages (+5 Dependent packages)
+
+Total download size: 3.8 M
+Downloading packages:
+No Presto metadata available for base
+Not downloading deltainfo for updates, MD is 420 k and rpms are 120 k
+--------------------------------------------------------------------------------
+Total                                              579 kB/s | 3.8 MB  00:06     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : 7:device-mapper-libs-1.02.146-4.el7.x86_64                  1/16 
+  Updating   : 7:device-mapper-1.02.146-4.el7.x86_64                       2/16 
+  Updating   : 7:device-mapper-event-libs-1.02.146-4.el7.x86_64            3/16 
+  Updating   : 7:device-mapper-event-1.02.146-4.el7.x86_64                 4/16 
+  Updating   : 7:lvm2-libs-2.02.177-4.el7.x86_64                           5/16 
+  Updating   : device-mapper-persistent-data-0.7.3-3.el7.x86_64            6/16 
+  Updating   : 7:lvm2-2.02.177-4.el7.x86_64                                7/16 
+  Updating   : yum-utils-1.1.31-46.el7_5.noarch                            8/16 
+  Cleanup    : yum-utils-1.1.31-42.el7.noarch                              9/16 
+  Cleanup    : 7:lvm2-2.02.171-8.el7.x86_64                               10/16 
+  Cleanup    : 7:lvm2-libs-2.02.171-8.el7.x86_64                          11/16 
+  Cleanup    : 7:device-mapper-event-1.02.140-8.el7.x86_64                12/16 
+  Cleanup    : 7:device-mapper-event-libs-1.02.140-8.el7.x86_64           13/16 
+  Cleanup    : 7:device-mapper-libs-1.02.140-8.el7.x86_64                 14/16 
+  Cleanup    : 7:device-mapper-1.02.140-8.el7.x86_64                      15/16 
+  Cleanup    : device-mapper-persistent-data-0.7.0-0.1.rc6.el7.x86_64     16/16 
+  Verifying  : device-mapper-persistent-data-0.7.3-3.el7.x86_64            1/16 
+  Verifying  : yum-utils-1.1.31-46.el7_5.noarch                            2/16 
+  Verifying  : 7:device-mapper-1.02.146-4.el7.x86_64                       3/16 
+  Verifying  : 7:device-mapper-event-1.02.146-4.el7.x86_64                 4/16 
+  Verifying  : 7:device-mapper-event-libs-1.02.146-4.el7.x86_64            5/16 
+  Verifying  : 7:lvm2-libs-2.02.177-4.el7.x86_64                           6/16 
+  Verifying  : 7:lvm2-2.02.177-4.el7.x86_64                                7/16 
+  Verifying  : 7:device-mapper-libs-1.02.146-4.el7.x86_64                  8/16 
+  Verifying  : 7:lvm2-libs-2.02.171-8.el7.x86_64                           9/16 
+  Verifying  : 7:device-mapper-event-1.02.140-8.el7.x86_64                10/16 
+  Verifying  : yum-utils-1.1.31-42.el7.noarch                             11/16 
+  Verifying  : 7:device-mapper-1.02.140-8.el7.x86_64                      12/16 
+  Verifying  : 7:device-mapper-event-libs-1.02.140-8.el7.x86_64           13/16 
+  Verifying  : 7:device-mapper-libs-1.02.140-8.el7.x86_64                 14/16 
+  Verifying  : 7:lvm2-2.02.171-8.el7.x86_64                               15/16 
+  Verifying  : device-mapper-persistent-data-0.7.0-0.1.rc6.el7.x86_64     16/16 
+
+Updated:
+  device-mapper-persistent-data.x86_64 0:0.7.3-3.el7                            
+  lvm2.x86_64 7:2.02.177-4.el7                                                  
+  yum-utils.noarch 0:1.1.31-46.el7_5                                            
+
+Dependency Updated:
+  device-mapper.x86_64 7:1.02.146-4.el7                                         
+  device-mapper-event.x86_64 7:1.02.146-4.el7                                   
+  device-mapper-event-libs.x86_64 7:1.02.146-4.el7                              
+  device-mapper-libs.x86_64 7:1.02.146-4.el7                                    
+  lvm2-libs.x86_64 7:2.02.177-4.el7                                             
+
+Complete!
+Loaded plugins: fastestmirror, langpacks
+adding repo from: https://download.docker.com/linux/centos/docker-ce.repo
+grabbing file https://download.docker.com/linux/centos/docker-ce.repo to /etc/yum.repos.d/docker-ce.repo
+repo saved to /etc/yum.repos.d/docker-ce.repo
+Loaded plugins: fastestmirror, langpacks
+============================= repo: docker-ce-edge =============================
+[docker-ce-edge]
+async = True
+bandwidth = 0
+base_persistdir = /var/lib/yum/repos/x86_64/7
+baseurl = https://download.docker.com/linux/centos/7/x86_64/edge
+cache = 0
+cachedir = /var/cache/yum/x86_64/7/docker-ce-edge
+check_config_file_age = True
+compare_providers_priority = 80
+cost = 1000
+deltarpm_metadata_percentage = 100
+deltarpm_percentage = 
+enabled = 1
+enablegroups = True
+exclude = 
+failovermethod = priority
+ftp_disable_epsv = False
+gpgcadir = /var/lib/yum/repos/x86_64/7/docker-ce-edge/gpgcadir
+gpgcakey = 
+gpgcheck = True
+gpgdir = /var/lib/yum/repos/x86_64/7/docker-ce-edge/gpgdir
+gpgkey = https://download.docker.com/linux/centos/gpg
+hdrdir = /var/cache/yum/x86_64/7/docker-ce-edge/headers
+http_caching = all
+includepkgs = 
+ip_resolve = 
+keepalive = True
+keepcache = False
+mddownloadpolicy = sqlite
+mdpolicy = group:small
+mediaid = 
+metadata_expire = 21600
+metadata_expire_filter = read-only:present
+metalink = 
+minrate = 0
+mirrorlist = 
+mirrorlist_expire = 86400
+name = Docker CE Edge - x86_64
+old_base_cache_dir = 
+password = 
+persistdir = /var/lib/yum/repos/x86_64/7/docker-ce-edge
+pkgdir = /var/cache/yum/x86_64/7/docker-ce-edge/packages
+proxy = False
+proxy_dict = 
+proxy_password = 
+proxy_username = 
+repo_gpgcheck = False
+retries = 10
+skip_if_unavailable = False
+ssl_check_cert_permissions = True
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = True
+throttle = 0
+timeout = 30.0
+ui_id = docker-ce-edge/x86_64
+ui_repoid_vars = releasever,
+   basearch
+username = 
+
+Loaded plugins: fastestmirror, langpacks
+============================= repo: docker-ce-test =============================
+[docker-ce-test]
+async = True
+bandwidth = 0
+base_persistdir = /var/lib/yum/repos/x86_64/7
+baseurl = https://download.docker.com/linux/centos/7/x86_64/test
+cache = 0
+cachedir = /var/cache/yum/x86_64/7/docker-ce-test
+check_config_file_age = True
+compare_providers_priority = 80
+cost = 1000
+deltarpm_metadata_percentage = 100
+deltarpm_percentage = 
+enabled = 1
+enablegroups = True
+exclude = 
+failovermethod = priority
+ftp_disable_epsv = False
+gpgcadir = /var/lib/yum/repos/x86_64/7/docker-ce-test/gpgcadir
+gpgcakey = 
+gpgcheck = True
+gpgdir = /var/lib/yum/repos/x86_64/7/docker-ce-test/gpgdir
+gpgkey = https://download.docker.com/linux/centos/gpg
+hdrdir = /var/cache/yum/x86_64/7/docker-ce-test/headers
+http_caching = all
+includepkgs = 
+ip_resolve = 
+keepalive = True
+keepcache = False
+mddownloadpolicy = sqlite
+mdpolicy = group:small
+mediaid = 
+metadata_expire = 21600
+metadata_expire_filter = read-only:present
+metalink = 
+minrate = 0
+mirrorlist = 
+mirrorlist_expire = 86400
+name = Docker CE Test - x86_64
+old_base_cache_dir = 
+password = 
+persistdir = /var/lib/yum/repos/x86_64/7/docker-ce-test
+pkgdir = /var/cache/yum/x86_64/7/docker-ce-test/packages
+proxy = False
+proxy_dict = 
+proxy_password = 
+proxy_username = 
+repo_gpgcheck = False
+retries = 10
+skip_if_unavailable = False
+ssl_check_cert_permissions = True
+sslcacert = 
+sslclientcert = 
+sslclientkey = 
+sslverify = True
+throttle = 0
+timeout = 30.0
+ui_id = docker-ce-test/x86_64
+ui_repoid_vars = releasever,
+   basearch
+username = 
+
+Loaded plugins: fastestmirror, langpacks
+Loading mirror speeds from cached hostfile
+ * base: mirror.vbctv.in
+ * extras: mirror.vbctv.in
+ * updates: mirror.vbctv.in
+Resolving Dependencies
+--> Running transaction check
+---> Package docker-ce.x86_64 0:18.06.1.ce-2.2.rc2.el7 will be installed
+--> Processing Dependency: container-selinux >= 2.9 for package: docker-ce-18.06.1.ce-2.2.rc2.el7.x86_64
+--> Running transaction check
+---> Package container-selinux.noarch 2:2.66-1.el7 will be installed
+--> Processing Dependency: selinux-policy-targeted >= 3.13.1-192 for package: 2:container-selinux-2.66-1.el7.noarch
+--> Processing Dependency: selinux-policy-base >= 3.13.1-192 for package: 2:container-selinux-2.66-1.el7.noarch
+--> Processing Dependency: selinux-policy >= 3.13.1-192 for package: 2:container-selinux-2.66-1.el7.noarch
+--> Running transaction check
+---> Package selinux-policy.noarch 0:3.13.1-166.el7 will be updated
+---> Package selinux-policy.noarch 0:3.13.1-192.el7_5.4 will be an update
+--> Processing Dependency: policycoreutils >= 2.5-18 for package: selinux-policy-3.13.1-192.el7_5.4.noarch
+---> Package selinux-policy-targeted.noarch 0:3.13.1-166.el7 will be updated
+---> Package selinux-policy-targeted.noarch 0:3.13.1-192.el7_5.4 will be an update
+--> Running transaction check
+---> Package policycoreutils.x86_64 0:2.5-17.1.el7 will be updated
+--> Processing Dependency: policycoreutils = 2.5-17.1.el7 for package: policycoreutils-python-2.5-17.1.el7.x86_64
+---> Package policycoreutils.x86_64 0:2.5-22.el7 will be an update
+--> Processing Dependency: libsepol >= 2.5-8 for package: policycoreutils-2.5-22.el7.x86_64
+--> Processing Dependency: libselinux-utils >= 2.5-12 for package: policycoreutils-2.5-22.el7.x86_64
+--> Running transaction check
+---> Package libselinux-utils.x86_64 0:2.5-11.el7 will be updated
+---> Package libselinux-utils.x86_64 0:2.5-12.el7 will be an update
+--> Processing Dependency: libselinux(x86-64) = 2.5-12.el7 for package: libselinux-utils-2.5-12.el7.x86_64
+---> Package libsepol.x86_64 0:2.5-6.el7 will be updated
+---> Package libsepol.x86_64 0:2.5-8.1.el7 will be an update
+---> Package policycoreutils-python.x86_64 0:2.5-17.1.el7 will be updated
+---> Package policycoreutils-python.x86_64 0:2.5-22.el7 will be an update
+--> Processing Dependency: setools-libs >= 3.3.8-2 for package: policycoreutils-python-2.5-22.el7.x86_64
+--> Processing Dependency: libsemanage-python >= 2.5-9 for package: policycoreutils-python-2.5-22.el7.x86_64
+--> Running transaction check
+---> Package libselinux.x86_64 0:2.5-11.el7 will be updated
+--> Processing Dependency: libselinux(x86-64) = 2.5-11.el7 for package: libselinux-python-2.5-11.el7.x86_64
+---> Package libselinux.x86_64 0:2.5-12.el7 will be an update
+---> Package libsemanage-python.x86_64 0:2.5-8.el7 will be updated
+---> Package libsemanage-python.x86_64 0:2.5-11.el7 will be an update
+--> Processing Dependency: libsemanage = 2.5-11.el7 for package: libsemanage-python-2.5-11.el7.x86_64
+---> Package setools-libs.x86_64 0:3.3.8-1.1.el7 will be updated
+---> Package setools-libs.x86_64 0:3.3.8-2.el7 will be an update
+--> Running transaction check
+---> Package libselinux-python.x86_64 0:2.5-11.el7 will be updated
+---> Package libselinux-python.x86_64 0:2.5-12.el7 will be an update
+---> Package libsemanage.x86_64 0:2.5-8.el7 will be updated
+---> Package libsemanage.x86_64 0:2.5-11.el7 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+================================================================================
+ Package                  Arch    Version                 Repository       Size
+================================================================================
+Installing:
+ docker-ce                x86_64  18.06.1.ce-2.2.rc2.el7  docker-ce-test   41 M
+Installing for dependencies:
+ container-selinux        noarch  2:2.66-1.el7            extras           35 k
+Updating for dependencies:
+ libselinux               x86_64  2.5-12.el7              base            162 k
+ libselinux-python        x86_64  2.5-12.el7              base            235 k
+ libselinux-utils         x86_64  2.5-12.el7              base            151 k
+ libsemanage              x86_64  2.5-11.el7              base            150 k
+ libsemanage-python       x86_64  2.5-11.el7              base            112 k
+ libsepol                 x86_64  2.5-8.1.el7             base            297 k
+ policycoreutils          x86_64  2.5-22.el7              base            867 k
+ policycoreutils-python   x86_64  2.5-22.el7              base            454 k
+ selinux-policy           noarch  3.13.1-192.el7_5.4      updates         453 k
+ selinux-policy-targeted  noarch  3.13.1-192.el7_5.4      updates         6.6 M
+ setools-libs             x86_64  3.3.8-2.el7             base            619 k
+
+Transaction Summary
+================================================================================
+Install  1 Package  (+ 1 Dependent package)
+Upgrade             ( 11 Dependent packages)
+
+Total download size: 51 M
+Downloading packages:
+No Presto metadata available for base
+Public key for docker-ce-18.06.1.ce-2.2.rc2.el7.x86_64.rpm is not installed
+--------------------------------------------------------------------------------
+Total                                              1.1 MB/s |  51 MB  00:45     
+Retrieving key from https://download.docker.com/linux/centos/gpg
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : libsepol-2.5-8.1.el7.x86_64                                 1/24 
+  Updating   : libselinux-2.5-12.el7.x86_64                                2/24 
+  Updating   : libsemanage-2.5-11.el7.x86_64                               3/24 
+  Updating   : libselinux-utils-2.5-12.el7.x86_64                          4/24 
+  Updating   : policycoreutils-2.5-22.el7.x86_64                           5/24 
+  Updating   : selinux-policy-3.13.1-192.el7_5.4.noarch                    6/24 
+  Updating   : selinux-policy-targeted-3.13.1-192.el7_5.4.noarch           7/24 
+  Updating   : libsemanage-python-2.5-11.el7.x86_64                        8/24 
+  Updating   : libselinux-python-2.5-12.el7.x86_64                         9/24 
+  Updating   : setools-libs-3.3.8-2.el7.x86_64                            10/24 
+  Updating   : policycoreutils-python-2.5-22.el7.x86_64                   11/24 
+  Installing : 2:container-selinux-2.66-1.el7.noarch                      12/24 
+  Installing : docker-ce-18.06.1.ce-2.2.rc2.el7.x86_64                    13/24 
+  Cleanup    : selinux-policy-targeted-3.13.1-166.el7.noarch              14/24 
+  Cleanup    : policycoreutils-python-2.5-17.1.el7.x86_64                 15/24 
+  Cleanup    : selinux-policy-3.13.1-166.el7.noarch                       16/24 
+  Cleanup    : policycoreutils-2.5-17.1.el7.x86_64                        17/24 
+  Cleanup    : libselinux-utils-2.5-11.el7.x86_64                         18/24 
+  Cleanup    : setools-libs-3.3.8-1.1.el7.x86_64                          19/24 
+  Cleanup    : libselinux-python-2.5-11.el7.x86_64                        20/24 
+  Cleanup    : libsemanage-python-2.5-8.el7.x86_64                        21/24 
+  Cleanup    : libsemanage-2.5-8.el7.x86_64                               22/24 
+  Cleanup    : libselinux-2.5-11.el7.x86_64                               23/24 
+  Cleanup    : libsepol-2.5-6.el7.x86_64                                  24/24 
+  Verifying  : docker-ce-18.06.1.ce-2.2.rc2.el7.x86_64                     1/24 
+  Verifying  : libsemanage-2.5-11.el7.x86_64                               2/24 
+  Verifying  : libselinux-python-2.5-12.el7.x86_64                         3/24 
+  Verifying  : selinux-policy-3.13.1-192.el7_5.4.noarch                    4/24 
+  Verifying  : setools-libs-3.3.8-2.el7.x86_64                             5/24 
+  Verifying  : libsemanage-python-2.5-11.el7.x86_64                        6/24 
+  Verifying  : selinux-policy-targeted-3.13.1-192.el7_5.4.noarch           7/24 
+  Verifying  : policycoreutils-python-2.5-22.el7.x86_64                    8/24 
+  Verifying  : 2:container-selinux-2.66-1.el7.noarch                       9/24 
+  Verifying  : libsepol-2.5-8.1.el7.x86_64                                10/24 
+  Verifying  : libselinux-2.5-12.el7.x86_64                               11/24 
+  Verifying  : libselinux-utils-2.5-12.el7.x86_64                         12/24 
+  Verifying  : policycoreutils-2.5-22.el7.x86_64                          13/24 
+  Verifying  : libselinux-utils-2.5-11.el7.x86_64                         14/24 
+  Verifying  : libselinux-2.5-11.el7.x86_64                               15/24 
+  Verifying  : libselinux-python-2.5-11.el7.x86_64                        16/24 
+  Verifying  : policycoreutils-python-2.5-17.1.el7.x86_64                 17/24 
+  Verifying  : selinux-policy-3.13.1-166.el7.noarch                       18/24 
+  Verifying  : libsepol-2.5-6.el7.x86_64                                  19/24 
+  Verifying  : libsemanage-python-2.5-8.el7.x86_64                        20/24 
+  Verifying  : libsemanage-2.5-8.el7.x86_64                               21/24 
+  Verifying  : policycoreutils-2.5-17.1.el7.x86_64                        22/24 
+  Verifying  : selinux-policy-targeted-3.13.1-166.el7.noarch              23/24 
+  Verifying  : setools-libs-3.3.8-1.1.el7.x86_64                          24/24 
+
+Installed:
+  docker-ce.x86_64 0:18.06.1.ce-2.2.rc2.el7                                     
+
+Dependency Installed:
+  container-selinux.noarch 2:2.66-1.el7                                         
+
+Dependency Updated:
+  libselinux.x86_64 0:2.5-12.el7                                                
+  libselinux-python.x86_64 0:2.5-12.el7                                         
+  libselinux-utils.x86_64 0:2.5-12.el7                                          
+  libsemanage.x86_64 0:2.5-11.el7                                               
+  libsemanage-python.x86_64 0:2.5-11.el7                                        
+  libsepol.x86_64 0:2.5-8.1.el7                                                 
+  policycoreutils.x86_64 0:2.5-22.el7                                           
+  policycoreutils-python.x86_64 0:2.5-22.el7                                    
+  selinux-policy.noarch 0:3.13.1-192.el7_5.4                                    
+  selinux-policy-targeted.noarch 0:3.13.1-192.el7_5.4                           
+  setools-libs.x86_64 0:3.3.8-2.el7                                             
+
+Complete!
+Docker Setup is complete
+ * updates: mirror.vbctv.in
+Loading mirror speeds from cached hostfile
+Loaded plugins: fastestmirror, langpacks
+Installed Packages
+ * extras: mirror.vbctv.in
+docker-ce.x86_64         18.06.1.ce-2.2.rc2.el7                 docker-ce-test  
+docker-ce.x86_64         18.06.1.ce-2.2.rc2.el7                 @docker-ce-test 
+docker-ce.x86_64         18.06.1.ce-2.1.rc1.el7                 docker-ce-test  
+docker-ce.x86_64         18.06.0.ce-3.el7                       docker-ce-test  
+docker-ce.x86_64         18.06.0.ce-3.el7                       docker-ce-stable
+docker-ce.x86_64         18.06.0.ce-3.el7                       docker-ce-edge  
+docker-ce.x86_64         18.06.0.ce-2.3.rc3.el7                 docker-ce-test  
+docker-ce.x86_64         18.06.0.ce-2.2.rc2.el7                 docker-ce-test  
+docker-ce.x86_64         18.06.0.ce-2.1.rc1.el7                 docker-ce-test  
+docker-ce.x86_64         18.05.0.ce-3.el7.centos                docker-ce-test  
+docker-ce.x86_64         18.05.0.ce-3.el7.centos                docker-ce-edge  
+docker-ce.x86_64         18.05.0.ce-2.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.04.0.ce-3.el7.centos                docker-ce-test  
+docker-ce.x86_64         18.04.0.ce-3.el7.centos                docker-ce-edge  
+docker-ce.x86_64         18.04.0.ce-2.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.04.0.ce-2.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.03.1.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         18.03.1.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         18.03.1.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         18.03.1.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.03.1.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.03.0.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         18.03.0.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         18.03.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         18.03.0.ce-0.4.rc4.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.03.0.ce-0.3.rc3.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.03.0.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.03.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.02.0.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         18.02.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         18.02.0.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.02.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         18.01.0.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         18.01.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         18.01.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.12.1.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         17.12.1.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         17.12.1.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.12.1.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.12.1.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.12.0.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         17.12.0.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         17.12.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.12.0.ce-0.4.rc4.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.12.0.ce-0.3.rc3.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.12.0.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.12.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.11.0.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         17.11.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.11.0.ce-0.4.rc4.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.11.0.ce-0.3.rc3.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.11.0.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.11.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.10.0.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         17.10.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.10.0.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.10.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.09.1.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         17.09.1.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         17.09.1.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.09.1.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.09.0.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         17.09.0.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         17.09.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.09.0.ce-0.3.rc3.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.09.0.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.09.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.07.0.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         17.07.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.07.0.ce-0.4.rc4.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.07.0.ce-0.3.rc3.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.07.0.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.07.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.06.2.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         17.06.2.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         17.06.2.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.06.2.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.06.1.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         17.06.1.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         17.06.1.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.06.1.ce-0.4.rc4.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.06.1.ce-0.3.rc3.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.06.1.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.06.1.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.06.0.ce-1.el7.centos                docker-ce-test  
+docker-ce.x86_64         17.06.0.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         17.06.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.06.0.ce-0.5.rc5.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.06.0.ce-0.4.rc4.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.06.0.ce-0.3.rc3.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.06.0.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.06.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.05.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.05.0.ce-0.3.rc3.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.05.0.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.05.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.04.0.ce-1.el7.centos                docker-ce-edge  
+docker-ce.x86_64         17.04.0.ce-0.2.rc2.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.04.0.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.03.2.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         17.03.2.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.03.1.ce-1.el7.centos                docker-ce-stable
+docker-ce.x86_64         17.03.1.ce-0.1.rc1.el7.centos          docker-ce-test  
+docker-ce.x86_64         17.03.0.ce-1.el7.centos                docker-ce-stable
+ * base: mirror.vbctv.in
+Available Packages
+Starting up Docker
+Docker started successfully
+ CHecking Docker status...........
+● docker.service - Docker Application Container Engine
+   Loaded: loaded (/usr/lib/systemd/system/docker.service; disabled; vendor preset: disabled)
+   Active: active (running) since Sun 2018-08-19 02:31:51 EDT; 24ms ago
+     Docs: https://docs.docker.com
+ Main PID: 14858 (dockerd)
+   Memory: 42.0M
+   CGroup: /system.slice/docker.service
+           ├─14858 /usr/bin/dockerd
+           └─14868 docker-containerd --config /var/run/docker/containerd/containerd.toml
+
+Aug 19 02:31:50 buildserver1.int.ora dockerd[14858]: time="2018-08-19T02:31:50.636530894-04:00" level=info msg="ClientConn switching balancer to \"pick_first\"" module=grpc
+Aug 19 02:31:50 buildserver1.int.ora dockerd[14858]: time="2018-08-19T02:31:50.636568393-04:00" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc42017f120, CONNECTING" module=grpc
+Aug 19 02:31:50 buildserver1.int.ora dockerd[14858]: time="2018-08-19T02:31:50.636740708-04:00" level=info msg="pickfirstBalancer: HandleSubConnStateChange: 0xc42017f120, READY" module=grpc
+Aug 19 02:31:50 buildserver1.int.ora dockerd[14858]: time="2018-08-19T02:31:50.636754684-04:00" level=info msg="Loading containers: start."
+Aug 19 02:31:50 buildserver1.int.ora dockerd[14858]: time="2018-08-19T02:31:50.963974234-04:00" level=info msg="Default bridge (docker0) is assigned with an IP address 172.17.0.0/16. Daemon option --bip can be used to set a preferred IP address"
+Aug 19 02:31:51 buildserver1.int.ora dockerd[14858]: time="2018-08-19T02:31:51.150343443-04:00" level=info msg="Loading containers: done."
+Aug 19 02:31:51 buildserver1.int.ora dockerd[14858]: time="2018-08-19T02:31:51.172927398-04:00" level=info msg="Docker daemon" commit=e2e08f8 graphdriver(s)=overlay2 version=18.06.1-ce-rc2
+Aug 19 02:31:51 buildserver1.int.ora dockerd[14858]: time="2018-08-19T02:31:51.173177019-04:00" level=info msg="Daemon has completed initialization"
+Aug 19 02:31:51 buildserver1.int.ora dockerd[14858]: time="2018-08-19T02:31:51.192442986-04:00" level=info msg="API listen on /var/run/docker.sock"
+Aug 19 02:31:51 buildserver1.int.ora systemd[1]: Started Docker Application Container Engine.
+ setting docker to run after reboot
+
+Client:
+ Version:           18.06.1-ce-rc2
+ API version:       1.38
+ Go version:        go1.10.3
+ Git commit:        e2e08f8
+ Built:             Wed Aug 15 01:28:43 2018
+ OS/Arch:           linux/amd64
+ Experimental:      false
+
+Server:
+ Engine:
+  Version:          18.06.1-ce-rc2
+  API version:      1.38 (minimum version 1.12)
+  Go version:       go1.10.3
+  Git commit:       e2e08f8
+  Built:            Wed Aug 15 01:31:09 2018
+  OS/Arch:          linux/amd64
+  Experimental:     false
+Verifying archive integrity... All good.
+Uncompressing VirtualBox for Linux installation.............

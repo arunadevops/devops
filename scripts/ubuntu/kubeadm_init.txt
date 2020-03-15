@@ -1,0 +1,88 @@
+root@k8smaster:~# export KUBECONFIG=/etc/kubernetes/admin.conf
+root@k8smaster:~# mkdir -p $HOME/.kube
+root@k8smaster:~# sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+root@k8smaster:~# kubeadm reset
+root@k8smaster:~# sysctl net.bridge.bridge-nf-call-iptables=1
+net.bridge.bridge-nf-call-iptables = 1
+root@k8smaster:~# sudo kubeadm init --pod-network-cidr=10.244.0.0/16 --apiserver-advertise-address=192.168.99.2
+[init] Using Kubernetes version: v1.13.2
+[preflight] Running pre-flight checks
+[preflight] Pulling images required for setting up a Kubernetes cluster
+[preflight] This might take a minute or two, depending on the speed of your internet connection
+[preflight] You can also perform this action in beforehand using 'kubeadm config images pull'
+[kubelet-start] Writing kubelet environment file with flags to file "/var/lib/kubelet/kubeadm-flags.env"
+[kubelet-start] Writing kubelet configuration to file "/var/lib/kubelet/config.yaml"
+[kubelet-start] Activating the kubelet service
+[certs] Using certificateDir folder "/etc/kubernetes/pki"
+[certs] Generating "ca" certificate and key
+[certs] Generating "apiserver-kubelet-client" certificate and key
+[certs] Generating "apiserver" certificate and key
+[certs] apiserver serving cert is signed for DNS names [k8smaster.logarithmic.local kubernetes kubernetes.default kubernetes.default.svc kubernetes.default.svc.cluster.local] and IPs [10.96.0.1 192.168.99.2]
+[certs] Generating "front-proxy-ca" certificate and key
+[certs] Generating "front-proxy-client" certificate and key
+[certs] Generating "etcd/ca" certificate and key
+[certs] Generating "etcd/server" certificate and key
+[certs] etcd/server serving cert is signed for DNS names [k8smaster.logarithmic.local localhost] and IPs [192.168.99.2 127.0.0.1 ::1]
+[certs] Generating "etcd/peer" certificate and key
+[certs] etcd/peer serving cert is signed for DNS names [k8smaster.logarithmic.local localhost] and IPs [192.168.99.2 127.0.0.1 ::1]
+[certs] Generating "etcd/healthcheck-client" certificate and key
+[certs] Generating "apiserver-etcd-client" certificate and key
+[certs] Generating "sa" key and public key
+[kubeconfig] Using kubeconfig folder "/etc/kubernetes"
+[kubeconfig] Writing "admin.conf" kubeconfig file
+[kubeconfig] Writing "kubelet.conf" kubeconfig file
+[kubeconfig] Writing "controller-manager.conf" kubeconfig file
+[kubeconfig] Writing "scheduler.conf" kubeconfig file
+[control-plane] Using manifest folder "/etc/kubernetes/manifests"
+[control-plane] Creating static Pod manifest for "kube-apiserver"
+[control-plane] Creating static Pod manifest for "kube-controller-manager"
+[control-plane] Creating static Pod manifest for "kube-scheduler"
+[etcd] Creating static Pod manifest for local etcd in "/etc/kubernetes/manifests"
+[wait-control-plane] Waiting for the kubelet to boot up the control plane as static Pods from directory "/etc/kubernetes/manifests". This can take up to 4m0s
+[apiclient] All control plane components are healthy after 20.002336 seconds
+[uploadconfig] storing the configuration used in ConfigMap "kubeadm-config" in the "kube-system" Namespace
+[kubelet] Creating a ConfigMap "kubelet-config-1.13" in namespace kube-system with the configuration for the kubelets in the cluster
+[patchnode] Uploading the CRI Socket information "/var/run/dockershim.sock" to the Node API object "k8smaster.logarithmic.local" as an annotation
+[mark-control-plane] Marking the node k8smaster.logarithmic.local as control-plane by adding the label "node-role.kubernetes.io/master=''"
+[mark-control-plane] Marking the node k8smaster.logarithmic.local as control-plane by adding the taints [node-role.kubernetes.io/master:NoSchedule]
+[bootstrap-token] Using token: y7ropz.2yzo3qxv04vy2wet
+[bootstrap-token] Configuring bootstrap tokens, cluster-info ConfigMap, RBAC Roles
+[bootstraptoken] configured RBAC rules to allow Node Bootstrap tokens to post CSRs in order for nodes to get long term certificate credentials
+[bootstraptoken] configured RBAC rules to allow the csrapprover controller automatically approve CSRs from a Node Bootstrap Token
+[bootstraptoken] configured RBAC rules to allow certificate rotation for all node client certificates in the cluster
+[bootstraptoken] creating the "cluster-info" ConfigMap in the "kube-public" namespace
+[addons] Applied essential addon: CoreDNS
+[addons] Applied essential addon: kube-proxy
+
+Your Kubernetes master has initialized successfully!
+
+To start using your cluster, you need to run the following as a regular user:
+
+  mkdir -p $HOME/.kube
+  sudo cp -i /etc/kubernetes/admin.conf $HOME/.kube/config
+  sudo chown $(id -u):$(id -g) $HOME/.kube/config
+
+You should now deploy a pod network to the cluster.
+Run "kubectl apply -f [podnetwork].yaml" with one of the options listed at:
+  https://kubernetes.io/docs/concepts/cluster-administration/addons/
+
+You can now join any number of machines by running the following on each node
+as root:
+
+  kubeadm join 192.168.99.2:6443 --token y7ropz.2yzo3qxv04vy2wet --discovery-token-ca-cert-hash sha256:bf32b2221174b3928db763ac33c913c91341cba0f9df6c5e89e77fed4766a240
+
+root@k8smaster:~#
+
+root@k8smaster:~# kubectl apply -f https://raw.githubusercontent.com/coreos/flannel/bc79dd1505b0c8681ece4de4c0d86c5cd2643275/Documentation/kube-flannel.yml
+clusterrole.rbac.authorization.k8s.io/flannel unchanged
+clusterrolebinding.rbac.authorization.k8s.io/flannel unchanged
+serviceaccount/flannel unchanged
+configmap/kube-flannel-cfg unchanged
+daemonset.extensions/kube-flannel-ds-amd64 unchanged
+daemonset.extensions/kube-flannel-ds-arm64 unchanged
+daemonset.extensions/kube-flannel-ds-arm unchanged
+daemonset.extensions/kube-flannel-ds-ppc64le unchanged
+daemonset.extensions/kube-flannel-ds-s390x unchanged
+root@k8smaster:~# 
+
+ 

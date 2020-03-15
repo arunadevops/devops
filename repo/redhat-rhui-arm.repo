@@ -1,0 +1,165 @@
+[rhui-rhel-7-for-arm-64-extras-rhui-debug-rpms]
+name=Red Hat Enterprise Linux 7 for ARM - Extras (Debug RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/$releasever/armv8-a/$basearch/extras/debug
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-for-arm-64-extras-rhui-rpms]
+name=Red Hat Enterprise Linux 7 for ARM - Extras (RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/$releasever/armv8-a/$basearch/extras/os
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-for-arm-64-extras-rhui-source-rpms]
+name=Red Hat Enterprise Linux 7 for ARM - Extras (Source RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/$releasever/armv8-a/$basearch/extras/source/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-for-arm-64-rhui-debug-rpms]
+name=Red Hat Enterprise Linux 7 for ARM (Debug RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/$releasever/armv8-a/$basearch/debug
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-for-arm-64-rhui-optional-debug-rpms]
+name=Red Hat Enterprise Linux 7 for ARM - Optional (Debug RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/$releasever/armv8-a/$basearch/optional/debug
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-for-arm-64-rhui-optional-rpms]
+name=Red Hat Enterprise Linux 7 for ARM - Optional (RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/$releasever/armv8-a/$basearch/optional/os
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-for-arm-64-rhui-optional-source-rpms]
+name=Red Hat Enterprise Linux 7 for ARM - Optional (Source RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/$releasever/armv8-a/$basearch/optional/source/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-for-arm-64-rhui-rpms]
+name=Red Hat Enterprise Linux 7 for ARM (RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/$releasever/armv8-a/$basearch/os
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-for-arm-64-rhui-source-rpms]
+name=Red Hat Enterprise Linux 7 for ARM (Source RPMs) from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/$releasever/armv8-a/$basearch/source/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-server-for-arm-64-devtools-debug-rhui-rpms]
+name=Red Hat Developer Tools (for RHEL 7 Server for ARM 64) Debug RPMs from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/7Server/armv8-a/$basearch/devtools/1/debug
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-server-for-arm-64-devtools-rhui-rpms]
+name=Red Hat Developer Tools (for RHEL 7 Server for ARM 64) RPMs from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/7Server/armv8-a/$basearch/devtools/1/os
+enabled=1
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-server-for-arm-64-devtools-source-rhui-rpms]
+name=Red Hat Developer Tools (for RHEL 7 Server for ARM 64) Source RPMs from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/7Server/armv8-a/$basearch/devtools/1/source/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-server-for-arm-64-rhscl-debug-rhui-rpms]
+name=Red Hat Software Collections (for RHEL 7 Server for ARM 64) Debug RPMs from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/7Server/armv8-a/$basearch/rhscl/1/debug
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-server-for-arm-64-rhscl-rhui-rpms]
+name=Red Hat Software Collections (for RHEL 7 Server for ARM 64) RPMs from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/7Server/armv8-a/$basearch/rhscl/1/os
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+
+[rhui-rhel-7-server-for-arm-64-rhscl-source-rhui-rpms]
+name=Red Hat Software Collections (for RHEL 7 Server for ARM 64) Source RPMs from RHUI
+mirrorlist=https://rhui3.REGION.aws.ce.redhat.com/pulp/mirror//content/dist/rhel-alt/rhui/server/7/7Server/armv8-a/$basearch/rhscl/1/source/SRPMS
+enabled=0
+gpgcheck=1
+gpgkey=file:///etc/pki/rpm-gpg/RPM-GPG-KEY-redhat-release
+sslverify=1
+sslcacert=/etc/pki/rhui/cdn.redhat.com-chain.crt
+sslclientcert=/etc/pki/rhui/product/content-rhel7-arm.crt
+sslclientkey=/etc/pki/rhui/content-rhel7-arm.key
+

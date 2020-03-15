@@ -1,0 +1,17 @@
+ifconfig enp0s8 192.168.56.2
+
+as a root user add the following lines 
+
+osboxes@k8smaster1:~$ cat /etc/network/interfaces
+# interfaces(5) file used by ifup(8) and ifdown(8)
+auto lo
+iface lo inet loopback
+
+#configure enp0s8 interface
+auto enp0s8
+iface enp0s8 inet static
+      address 192.168.99.2
+      netmask 255.255.255.0
+osboxes@k8smaster1:~$ 
+
+

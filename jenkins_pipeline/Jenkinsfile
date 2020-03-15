@@ -1,0 +1,43 @@
+node {
+    deleteDir()
+    try {
+        stage ('Code Checkout') {             
+                sh '''
+                   rm -rf $WORKSPACE/github/
+                   mkdir -p $WORKSPACE/github/
+                   cd $WORKSPACE/github
+                   git clone https://github.com/pklanka2/simpleapp.git
+
+				   exit 0
+                '''
+        echo 'Code Checkout Complete'
+        }
+     stage ('Creating builds ') {
+         sh '''
+         cd $WORKSPACE/github/simpleapp/
+         zip -9 -r azenta.zip azenta/         
+		 exit 0
+        '''
+       } 
+     stage ('Deploying Generated Builds') {
+         sh '''
+         cd $WORKSPACE/github/simpleapp
+         cp -pr azenta.zip /u01/tomcat/webapps/
+         cd /u01/tomcat/webapps/
+         unzip azenta.zip 
+         echo Deploying Build COmplete
+		 exit 0
+        '''
+       }
+    
+}catch (e) {
+    // If there was an exception thrown, the build failed
+    currentBuild.result = "FAILED"
+    throw e
+  } finally {
+    // Success or failure, always send notifications
+    
+  }
+
+}
+

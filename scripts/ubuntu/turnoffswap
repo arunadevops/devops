@@ -1,0 +1,5 @@
+swapoff -a       --> temporary 
+
+comment out swap line in /etc/fstab
+
+

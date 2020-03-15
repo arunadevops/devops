@@ -1,0 +1,192 @@
+[phanikishorelanka@slave1 ~]$ sh -x rdis_slave.sh 
++ sudo yum install epel-release
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Determining fastest mirrors
+epel/x86_64/metalink                                                                                                                                                                                                                                                |  18 kB  00:00:00     
+ * base: mirror.mojohost.com
+ * epel: mirror.us.leaseweb.net
+ * extras: ewr.edge.kernel.org
+ * updates: mirrors.advancedhosters.com
+base                                                                                                                                                                                                                                                                | 3.6 kB  00:00:00     
+epel                                                                                                                                                                                                                                                                | 4.7 kB  00:00:00     
+extras                                                                                                                                                                                                                                                              | 3.4 kB  00:00:00     
+google-cloud-compute/signature                                                                                                                                                                                                                                      |  454 B  00:00:00     
+google-cloud-compute/signature                                                                                                                                                                                                                                      | 1.8 kB  00:00:00 !!! 
+google-cloud-sdk/signature                                                                                                                                                                                                                                          |  454 B  00:00:00     
+google-cloud-sdk/signature                                                                                                                                                                                                                                          | 1.4 kB  00:00:00 !!! 
+updates                                                                                                                                                                                                                                                             | 3.4 kB  00:00:00     
+(1/10): base/7/x86_64/group_gz                                                                                                                                                                                                                                      | 166 kB  00:00:00     
+(2/10): base/7/x86_64/primary_db                                                                                                                                                                                                                                    | 6.0 MB  00:00:00     
+(3/10): epel/x86_64/group_gz                                                                                                                                                                                                                                        |  88 kB  00:00:00     
+(4/10): epel/x86_64/updateinfo                                                                                                                                                                                                                                      | 960 kB  00:00:00     
+(5/10): epel/x86_64/primary_db                                                                                                                                                                                                                                      | 6.6 MB  00:00:00     
+(6/10): extras/7/x86_64/primary_db                                                                                                                                                                                                                                  | 179 kB  00:00:00     
+(7/10): google-cloud-compute/updateinfo                                                                                                                                                                                                                             | 1.1 kB  00:00:00     
+(8/10): google-cloud-compute/primary                                                                                                                                                                                                                                | 3.6 kB  00:00:00     
+(9/10): google-cloud-sdk/primary                                                                                                                                                                                                                                    |  79 kB  00:00:00     
+(10/10): updates/7/x86_64/primary_db                                                                                                                                                                                                                                | 2.4 MB  00:00:00     
+google-cloud-compute                                                                                                                                                                                                                                                                 10/10
+google-cloud-sdk                                                                                                                                                                                                                                                                   536/536
+Package epel-release-7-11.noarch already installed and latest version
+Nothing to do
++ sudo yum update
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.mojohost.com
+ * epel: mirror.us.leaseweb.net
+ * extras: ewr.edge.kernel.org
+ * updates: mirrors.advancedhosters.com
+Resolving Dependencies
+--> Running transaction check
+---> Package google-cloud-sdk.noarch 0:234.0.0-1.el7 will be updated
+---> Package google-cloud-sdk.noarch 0:235.0.0-1.el7 will be an update
+---> Package systemd.x86_64 0:219-62.el7_6.3 will be updated
+---> Package systemd.x86_64 0:219-62.el7_6.5 will be an update
+---> Package systemd-libs.x86_64 0:219-62.el7_6.3 will be updated
+---> Package systemd-libs.x86_64 0:219-62.el7_6.5 will be an update
+---> Package systemd-sysv.x86_64 0:219-62.el7_6.3 will be updated
+---> Package systemd-sysv.x86_64 0:219-62.el7_6.5 will be an update
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===========================================================================================================================================================================================================================================================================================
+ Package                                                                 Arch                                                          Version                                                               Repository                                                               Size
+===========================================================================================================================================================================================================================================================================================
+Updating:
+ google-cloud-sdk                                                        noarch                                                        235.0.0-1.el7                                                         google-cloud-sdk                                                         30 M
+ systemd                                                                 x86_64                                                        219-62.el7_6.5                                                        updates                                                                 5.1 M
+ systemd-libs                                                            x86_64                                                        219-62.el7_6.5                                                        updates                                                                 407 k
+ systemd-sysv                                                            x86_64                                                        219-62.el7_6.5                                                        updates                                                                  84 k
+
+Transaction Summary
+===========================================================================================================================================================================================================================================================================================
+Upgrade  4 Packages
+
+Total download size: 36 M
+Is this ok [y/d/N]: y
+Downloading packages:
+Delta RPMs disabled because /usr/bin/applydeltarpm not installed.
+(1/4): systemd-libs-219-62.el7_6.5.x86_64.rpm                                                                                                                                                                                                                       | 407 kB  00:00:00     
+(2/4): systemd-sysv-219-62.el7_6.5.x86_64.rpm                                                                                                                                                                                                                       |  84 kB  00:00:00     
+(3/4): systemd-219-62.el7_6.5.x86_64.rpm                                                                                                                                                                                                                            | 5.1 MB  00:00:00     
+(4/4): 803b0982fffe595d0eb04a4e6b908ca2329a2cac9fbc07ca71e93d9557c0d28f-google-cloud-sdk-235.0.0-1.el7.noarch.rpm                                                                                                                                                   |  30 MB  00:00:00     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                                                                       46 MB/s |  36 MB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Updating   : systemd-libs-219-62.el7_6.5.x86_64                                                                                                                                                                                                                                      1/8 
+  Updating   : systemd-219-62.el7_6.5.x86_64                                                                                                                                                                                                                                           2/8 
+  Updating   : systemd-sysv-219-62.el7_6.5.x86_64                                                                                                                                                                                                                                      3/8 
+  Updating   : google-cloud-sdk-235.0.0-1.el7.noarch                                                                                                                                                                                                                                   4/8 
+  Cleanup    : systemd-sysv-219-62.el7_6.3.x86_64                                                                                                                                                                                                                                      5/8 
+  Cleanup    : google-cloud-sdk-234.0.0-1.el7.noarch                                                                                                                                                                                                                                   6/8 
+  Cleanup    : systemd-219-62.el7_6.3.x86_64                                                                                                                                                                                                                                           7/8 
+  Cleanup    : systemd-libs-219-62.el7_6.3.x86_64                                                                                                                                                                                                                                      8/8 
+  Verifying  : systemd-219-62.el7_6.5.x86_64                                                                                                                                                                                                                                           1/8 
+  Verifying  : google-cloud-sdk-235.0.0-1.el7.noarch                                                                                                                                                                                                                                   2/8 
+  Verifying  : systemd-libs-219-62.el7_6.5.x86_64                                                                                                                                                                                                                                      3/8 
+  Verifying  : systemd-sysv-219-62.el7_6.5.x86_64                                                                                                                                                                                                                                      4/8 
+  Verifying  : systemd-libs-219-62.el7_6.3.x86_64                                                                                                                                                                                                                                      5/8 
+  Verifying  : google-cloud-sdk-234.0.0-1.el7.noarch                                                                                                                                                                                                                                   6/8 
+  Verifying  : systemd-219-62.el7_6.3.x86_64                                                                                                                                                                                                                                           7/8 
+  Verifying  : systemd-sysv-219-62.el7_6.3.x86_64                                                                                                                                                                                                                                      8/8 
+
+Updated:
+  google-cloud-sdk.noarch 0:235.0.0-1.el7                                   systemd.x86_64 0:219-62.el7_6.5                                   systemd-libs.x86_64 0:219-62.el7_6.5                                   systemd-sysv.x86_64 0:219-62.el7_6.5                                  
+
+Complete!
++ sudo yum install redis
+Failed to set locale, defaulting to C
+Loaded plugins: fastestmirror
+Loading mirror speeds from cached hostfile
+ * base: mirror.mojohost.com
+ * epel: mirror.us.leaseweb.net
+ * extras: ewr.edge.kernel.org
+ * updates: mirrors.advancedhosters.com
+Resolving Dependencies
+--> Running transaction check
+---> Package redis.x86_64 0:3.2.12-2.el7 will be installed
+--> Processing Dependency: libjemalloc.so.1()(64bit) for package: redis-3.2.12-2.el7.x86_64
+--> Running transaction check
+---> Package jemalloc.x86_64 0:3.6.0-1.el7 will be installed
+--> Finished Dependency Resolution
+
+Dependencies Resolved
+
+===========================================================================================================================================================================================================================================================================================
+ Package                                                              Arch                                                               Version                                                                    Repository                                                        Size
+===========================================================================================================================================================================================================================================================================================
+Installing:
+ redis                                                                x86_64                                                             3.2.12-2.el7                                                               epel                                                             544 k
+Installing for dependencies:
+ jemalloc                                                             x86_64                                                             3.6.0-1.el7                                                                epel                                                             105 k
+
+Transaction Summary
+===========================================================================================================================================================================================================================================================================================
+Install  1 Package (+1 Dependent package)
+
+Total download size: 648 k
+Installed size: 1.7 M
+Is this ok [y/d/N]: y
+Downloading packages:
+(1/2): jemalloc-3.6.0-1.el7.x86_64.rpm                                                                                                                                                                                                                              | 105 kB  00:00:00     
+(2/2): redis-3.2.12-2.el7.x86_64.rpm                                                                                                                                                                                                                                | 544 kB  00:00:00     
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+Total                                                                                                                                                                                                                                                      827 kB/s | 648 kB  00:00:00     
+Running transaction check
+Running transaction test
+Transaction test succeeded
+Running transaction
+  Installing : jemalloc-3.6.0-1.el7.x86_64                                                                                                                                                                                                                                             1/2 
+  Installing : redis-3.2.12-2.el7.x86_64                                                                                                                                                                                                                                               2/2 
+  Verifying  : redis-3.2.12-2.el7.x86_64                                                                                                                                                                                                                                               1/2 
+  Verifying  : jemalloc-3.6.0-1.el7.x86_64                                                                                                                                                                                                                                             2/2 
+
+Installed:
+  redis.x86_64 0:3.2.12-2.el7                                                                                                                                                                                                                                                              
+
+Dependency Installed:
+  jemalloc.x86_64 0:3.6.0-1.el7                                                                                                                                                                                                                                                            
+
+Complete!
++ sudo systemctl start redis
++ sudo systemctl enable redis
+Created symlink from /etc/systemd/system/multi-user.target.wants/redis.service to /usr/lib/systemd/system/redis.service.
++ reds-cli ping
+rdis_slave.sh: line 12: reds-cli: command not found
++ sudo cp -pr /etc/redis.conf /etc/redis.conf.orig
++ sudo sed -i 's/appendonly[[:space:]]no/appendonly yes/g' /etc/redis.conf
++ sudo systemctl restart redis
++ redis-cli ping
+PONG
++ sudo cp -pr /etc/sysctl.conf /etc/sysctl.conf.orig
++ sudo sysctl vm.overcommit_memory=1
+vm.overcommit_memory = 1
++ sudo cp /etc/redis.conf /etc/redis.conf.orig2
+++ hostname -i
++ IP=10.142.0.3
++ sed 's/bind[[:space:]]127.0.0.1/bind 127.0.0.1 10.142.0.3/g' /etc/redis.conf
+sed: can't read /etc/redis.conf: Permission denied
+++ ping -c 1 master
+++ grep icmp_seq
+++ sed 's/)://g'
+++ awk '{print $5}'
+++ sed 's/(//g '
++ Master_IP=10.142.0.2
++ Master_Port=6379
++ sudo cp /etc/redis.conf /etc/redis.conf.orig3
++ sudo sed -i 's/^#\sslaveof/ slaveof/g' /etc/redis.conf
++ sudo sed -i 's/<masterip>/10.142.0.2/g' /etc/redis.conf
++ sudo sed -i 's/<masterport>/6379/g' /etc/redis.conf
++ sudo systemctl restart redis
+[phanikishorelanka@slave1 ~]$ grep slaveof /etc/redis.conf
+grep: /etc/redis.conf: Permission denied
+[phanikishorelanka@slave1 ~]$ sudo grep slaveof /etc/redis.conf
+# Master-Slave replication. Use slaveof to make a Redis instance a copy of
+ slaveof 10.142.0.2 6379
+[phanikishorelanka@slave1 ~]$ 
